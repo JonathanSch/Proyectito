@@ -39,7 +39,7 @@ module.exports = {
         try {
             const user = await services.findUserById(req.params.id)
             const modifiedUser = await services.modifyUser(user , {is_active : false})
-            res.send({modifiedUser}).status(201)
+            res.send({message:'usuario más que eliminado'}).status(201)
         } catch (error) {
             res.send({error}).status(409)
         }
